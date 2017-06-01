@@ -46,14 +46,7 @@ def processRequest(req):
     data = json.loads(result)
     res = makeWebhookResult(data)
     return res
-    else:
-    return {
-        "speech": "Action call success",
-        "displayText": "Action call success",
-        # "data": data,
-        # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
-    }
+  
 
 
 def makeYqlQuery(req):
