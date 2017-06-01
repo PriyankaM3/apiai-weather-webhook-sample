@@ -59,6 +59,8 @@ def makeYqlQuery(req):
 
 def makeWebhookResult(req):
 
+num = 3
+if num >= 0:
     speech = "Action call success"
     print(speech)
 
@@ -69,6 +71,9 @@ def makeWebhookResult(req):
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
     }
+else:
+    print("Negative number")
+    
 
 
 if __name__ == '__main__':
