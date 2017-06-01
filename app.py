@@ -58,8 +58,7 @@ def makeYqlQuery(req):
 
 
 def makeWebhookResult(req):
-if req.get("result").get("action") != "yahooWeatherForecast":
-return{}
+
     speech = "Action call success"
     print(speech)
 
