@@ -72,7 +72,15 @@ if num >= 0:
         "source": "apiai-weather-webhook-sample"
     }
 else:
-    print("Negative number")
+speech = "Action call success"
+    print(speech)
+   return {
+        "speech": speech,
+        "displayText": speech,
+        # "data": data,
+        # "contextOut": [],
+        "source": "apiai-weather-webhook-sample"
+    }
     
 
 
