@@ -43,7 +43,7 @@ def processRequest(req):
     yql_url = baseurl + urlencode({'q': yql_query}) + "&format=json"
     result = urlopen(yql_url).read()
     data = json.loads(result)
-    res = makeWebhookResult(data)
+    res = makeWebhookResult(req)
     return res
 
 
@@ -57,7 +57,9 @@ def makeYqlQuery(req):
     return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')"
 
 
-def makeWebhookResult(data):
+def makeWebhookResult(req):
+if req.get("result").get("action") != "yahooWeatherForecast":
+return{}
     speech = "Action call success"
     print(speech)
 
