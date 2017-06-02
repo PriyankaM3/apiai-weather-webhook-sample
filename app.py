@@ -48,6 +48,21 @@ def processRequest(req):
         
     return res
 
+    if req.get("result").get("action") == "open.cust":
+        speech = "Opening customer from pNc"
+
+
+    return {
+        "speech": speech,
+        "displayText": speech,
+        # "data": data,
+        # "contextOut": [],
+        "source": "apiai-weather-webhook-sample"
+    }
+        
+    return res
+
+
 
 def makeYqlQuery(req):
     result = req.get("result")
