@@ -38,10 +38,9 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") == "openCustomer":
         
-        speech = "Open customer from life"
-
-        print("Response:")
-        print(speech)
+        type = req.get("result").get("parameters").get("ins_type")
+        customer = req.get("result").get("parameters").get("customer")
+        speech = "Opening " + customer + " from " + type
 
         return {
             "speech": speech,
