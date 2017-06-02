@@ -59,8 +59,6 @@ def processRequest(req):
         # "contextOut": [],
         "source": "apiai-weather-webhook-sample"
     }
-        
-    return res
 
 
 
