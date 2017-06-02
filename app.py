@@ -36,20 +36,22 @@ def webhook():
 
 
 def processRequest(req):
-    if req.get("result").get("action") != "openCustomer":
-        return {}
-    speech = "Open customer from life"
+    if req.get("result").get("action") == "openCustomer":
+        
+        speech = "Open customer from life"
 
-    print("Response:")
-    print(speech)
+        print("Response:")
+        print(speech)
 
-    return {
-        "speech": speech,
-        "displayText": speech,
-        # "data": data,
-        # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
-    }
+        return {
+            "speech": speech,
+            "displayText": speech,
+            # "data": data,
+            # "contextOut": [],
+            "source": "apiai-weather-webhook-sample"
+        }
+    
+        
 
 
 def makeYqlQuery(req):
