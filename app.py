@@ -66,7 +66,8 @@ def processRequest(req):
         }
     
     elif req.get("result").get("action") == "openType":
-        speech = "open insurance type"
+        type = req.get("result").get("parameters").get("ins_type")
+        speech = "open insurance type: "+type
 
         print("Response:")
         print(speech)
