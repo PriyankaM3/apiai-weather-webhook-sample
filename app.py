@@ -50,9 +50,20 @@ def processRequest(req):
             # "contextOut": [],
             "source": "apiai-weather-webhook-sample"
         }
-    
-        
+    else:
+        speech = "Open insurance type"
 
+        print("Response:")
+        print(speech)
+
+        return {
+            "speech": speech,
+            "displayText": speech,
+            # "data": data,
+            # "contextOut": [],
+            "source": "apiai-weather-webhook-sample"
+        }
+        
 
 def makeYqlQuery(req):
     result = req.get("result")
