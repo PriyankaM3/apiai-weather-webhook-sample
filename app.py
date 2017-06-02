@@ -41,6 +41,11 @@ def processRequest(req):
         type = req.get("result").get("parameters").get("ins_type")
         customer = req.get("result").get("parameters").get("customer")
         speech = "Opening " + customer + " from " + type
+        
+        json_file='app.json'
+        json_data=open(json_file)
+        data = json.load(json_data)
+        json_data.close()
 
         return {
             "speech": speech,
