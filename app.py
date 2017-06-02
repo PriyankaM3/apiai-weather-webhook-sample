@@ -41,11 +41,12 @@ def processRequest(req):
         type = req.get("result").get("parameters").get("ins_type")
         customer = req.get("result").get("parameters").get("customer")
         speech = "Opening " + customer + " from " + type
+        data = req.get("result")
 
         return {
             "speech": speech,
             "displayText": speech,
-            # "data": data,
+             "data": data,
             # "contextOut": [],
             "source": "apiai-weather-webhook-sample"
         }
