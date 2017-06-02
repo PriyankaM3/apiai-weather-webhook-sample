@@ -50,8 +50,23 @@ def processRequest(req):
             # "contextOut": [],
             "source": "apiai-weather-webhook-sample"
         }
+    
     elif req.get("result").get("action") == "filterBy":
         speech = "Filtering By"
+
+        print("Response:")
+        print(speech)
+
+        return {
+            "speech": speech,
+            "displayText": speech,
+            # "data": data,
+            # "contextOut": [],
+            "source": "apiai-weather-webhook-sample"
+        }
+    
+    elif req.get("result").get("action") == "openType":
+        speech = "open insurance type"
 
         print("Response:")
         print(speech)
